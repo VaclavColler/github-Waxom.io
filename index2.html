@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Waxom</title>
+    <link rel="stylesheet" type="text/css" href="2\assets\css\style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500|Raleway:400,500,600,700,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <svg style="display: none;">
+        <symbol id="pencil" viewBox="0 0 49 49">
+            <g>
+                <path
+                    d="M47.668 19.717L33.402 33.985.534 48.463l14.477-32.872L29.279 1.327a1.589 1.589 0 1 1 2.248 2.249L17.683 17.422 9.107 36.888l2.999 2.999 19.467-8.573L45.42 17.47a1.587 1.587 0 0 1 2.248 0c.621.62.621 1.63 0 2.247zm-20.173 6.5l13.332-13.332a1.585 1.585 0 0 1 2.25 0c.623.62.623 1.625 0 2.249L29.745 28.466a1.594 1.594 0 0 1-2.25 0 1.593 1.593 0 0 1 0-2.25zm-3.48-3.482L37.348 9.403a1.59 1.59 0 1 1 2.25 2.25L26.265 24.985a1.592 1.592 0 0 1-2.25-2.25zm-3.48-3.482l13.332-13.33a1.586 1.586 0 0 1 2.25 0c.622.62.622 1.625 0 2.25l-13.333 13.33c-.31.31-.719.465-1.125.465s-.814-.154-1.125-.466a1.591 1.591 0 0 1 0-2.249z" />
+                <path
+                    d="M47.668 19.717L33.402 33.985.534 48.463l14.477-32.872L29.279 1.327a1.589 1.589 0 1 1 2.248 2.249L17.683 17.422 9.107 36.888l2.999 2.999 19.467-8.573L45.42 17.47a1.587 1.587 0 0 1 2.248 0c.621.62.621 1.63 0 2.247zm-20.173 6.5l13.332-13.332a1.585 1.585 0 0 1 2.25 0c.623.62.623 1.625 0 2.249L29.745 28.466a1.594 1.594 0 0 1-2.25 0 1.593 1.593 0 0 1 0-2.25zm-3.48-3.482L37.348 9.403a1.59 1.59 0 1 1 2.25 2.25L26.265 24.985a1.592 1.592 0 0 1-2.25-2.25zm-3.48-3.482l13.332-13.33a1.586 1.586 0 0 1 2.25 0c.622.62.622 1.625 0 2.25l-13.333 13.33c-.31.31-.719.465-1.125.465s-.814-.154-1.125-.466a1.591 1.591 0 0 1 0-2.249z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="layers" viewBox="0 0 44 40">
+            <g>
+                <path d="M43.287 11.666L21.851 23.227.414 11.666 21.85.106zm-3.985 5.882l3.985 2.149-21.436 11.556L.414 19.697l3.985-2.15 17.452 9.41zm0 8.025l3.985 2.148-21.436 11.562L.414 27.721l3.985-2.148 17.452 9.412z" />
+                <path d="M43.287 11.666L21.851 23.227.414 11.666 21.85.106zm-3.985 5.882l3.985 2.149-21.436 11.556L.414 19.697l3.985-2.15 17.452 9.41zm0 8.025l3.985 2.148-21.436 11.562L.414 27.721l3.985-2.148 17.452 9.412z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="cog" viewBox="0 0 44 44">
+            <g>
+                <path
+                    d="M41.322 25.71c-1.44.513-2.837 1.762-3.243 2.743-.406.98-.298 2.85.357 4.23.656 1.379.259 3.427-.886 4.572-1.146 1.147-3.194 1.544-4.573.887-1.38-.656-3.252-.764-4.233-.356-.98.41-2.227 1.808-2.739 3.246-.512 1.436-2.241 2.601-3.861 2.601s-3.35-1.165-3.862-2.6c-.512-1.439-1.759-2.837-2.74-3.244-.982-.408-2.852-.303-4.232.353-1.38.657-3.427.26-4.573-.887-1.145-1.145-1.542-3.193-.886-4.572s.763-3.249.355-4.23c-.408-.979-1.8-2.23-3.24-2.742C1.526 25.199.36 23.47.36 21.85c0-1.62 1.166-3.35 2.606-3.857 1.44-.51 2.83-1.761 3.238-2.743.407-.984.303-2.853-.353-4.233-.656-1.38-.26-3.426.886-4.574 1.146-1.146 3.195-1.541 4.573-.885 1.38.656 3.25.764 4.231.357.981-.406 2.23-1.803 2.741-3.242.512-1.439 2.241-2.606 3.862-2.606 1.62 0 3.35 1.167 3.861 2.606.512 1.44 1.76 2.837 2.74 3.242.982.407 2.852.3 4.232-.357 1.38-.656 3.427-.261 4.573.885 1.145 1.148 1.542 3.195.886 4.574-.655 1.379-.76 3.252-.355 4.234.406.984 1.8 2.232 3.24 2.742 1.44.508 2.606 2.237 2.606 3.857s-1.166 3.349-2.605 3.86zM30.128 21.86c0-4.419-3.574-7.994-7.984-7.994a7.988 7.988 0 0 0-7.994 7.994 7.984 7.984 0 0 0 7.994 7.983 7.981 7.981 0 0 0 7.984-7.983z" />
+                <path
+                    d="M41.322 25.71c-1.44.513-2.837 1.762-3.243 2.743-.406.98-.298 2.85.357 4.23.656 1.379.259 3.427-.886 4.572-1.146 1.147-3.194 1.544-4.573.887-1.38-.656-3.252-.764-4.233-.356-.98.41-2.227 1.808-2.739 3.246-.512 1.436-2.241 2.601-3.861 2.601s-3.35-1.165-3.862-2.6c-.512-1.439-1.759-2.837-2.74-3.244-.982-.408-2.852-.303-4.232.353-1.38.657-3.427.26-4.573-.887-1.145-1.145-1.542-3.193-.886-4.572s.763-3.249.355-4.23c-.408-.979-1.8-2.23-3.24-2.742C1.526 25.199.36 23.47.36 21.85c0-1.62 1.166-3.35 2.606-3.857 1.44-.51 2.83-1.761 3.238-2.743.407-.984.303-2.853-.353-4.233-.656-1.38-.26-3.426.886-4.574 1.146-1.146 3.195-1.541 4.573-.885 1.38.656 3.25.764 4.231.357.981-.406 2.23-1.803 2.741-3.242.512-1.439 2.241-2.606 3.862-2.606 1.62 0 3.35 1.167 3.861 2.606.512 1.44 1.76 2.837 2.74 3.242.982.407 2.852.3 4.232-.357 1.38-.656 3.427-.261 4.573.885 1.145 1.148 1.542 3.195.886 4.574-.655 1.379-.76 3.252-.355 4.234.406.984 1.8 2.232 3.24 2.742 1.44.508 2.606 2.237 2.606 3.857s-1.166 3.349-2.605 3.86zM30.128 21.86c0-4.419-3.574-7.994-7.984-7.994a7.988 7.988 0 0 0-7.994 7.994 7.984 7.984 0 0 0 7.994 7.983 7.981 7.981 0 0 0 7.984-7.983z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="case" viewBox="0 0 52 36">
+            <g>
+                <path
+                    d="M.738 30.147V7.983c0-1.364 1.105-2.482 2.458-2.48h10.816V4.057c0-.995.382-1.923 1.082-2.628A3.64 3.64 0 0 1 17.7.335h6.29c2.029 0 3.684 1.667 3.684 3.723V5.5H38.49c1.35 0 2.458 1.118 2.458 2.482v1.654H14.742c-2.267 0-4.74 1.55-5.742 3.608zM16.47 5.502h8.747V4.058c0-.688-.55-1.243-1.228-1.243h-6.29c-.327 0-.636.13-.867.368a1.25 1.25 0 0 0-.362.875zm25.451 28.26c-.595 1.222-2.192 2.222-3.543 2.222H3.08c-1.35 0-1.968-1.002-1.369-2.221l9.492-19.422c.593-1.223 2.189-2.226 3.539-2.226H50.04c1.354 0 1.969 1.003 1.371 2.226z" />
+                <path
+                    d="M.738 30.147V7.983c0-1.364 1.105-2.482 2.458-2.48h10.816V4.057c0-.995.382-1.923 1.082-2.628A3.64 3.64 0 0 1 17.7.335h6.29c2.029 0 3.684 1.667 3.684 3.723V5.5H38.49c1.35 0 2.458 1.118 2.458 2.482v1.654H14.742c-2.267 0-4.74 1.55-5.742 3.608zM16.47 5.502h8.747V4.058c0-.688-.55-1.243-1.228-1.243h-6.29c-.327 0-.636.13-.867.368a1.25 1.25 0 0 0-.362.875zm25.451 28.26c-.595 1.222-2.192 2.222-3.543 2.222H3.08c-1.35 0-1.968-1.002-1.369-2.221l9.492-19.422c.593-1.223 2.189-2.226 3.539-2.226H50.04c1.354 0 1.969 1.003 1.371 2.226z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <header class="header">
+        <div class="container">
+            <div class="inner_header">
+                <div class="logo">
+                    <a href=""><img src="2\assets\img\logo.svg" class="header_img" alt="Logotype"></a>
+                    <a class="logo_text" href="#">Waxom</a>
+                </div>
+                <nav class="nav">
+                    <a class="nav_link" href="#">Home</a>
+                    <a class="nav_link" href="#">About Us</a>
+                    <a class="nav_link" href="#">Portfolio</a>
+                    <a class="nav_link" href="#">Features</a>
+                    <a class="nav_link" href="#">Blog</a>
+                    <a class="nav_link" href="#">Pricing</a>
+                    <a class="nav_link" href="#">Shortcodes</a>
+                    <a class="nav_link" href="#">Contact</a>
+                </nav>
+                <div class="header_icons">
+                    <img src="2\assets\img\icon-cart.svg" alt="Shopping cart">
+                    <img src="2\assets\img\icon-search.svg" alt="Search">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="preview_text">
+                <h2>Unique and Modern Design</h2>
+                <h1>Portfolio PSD Template</h1>
+                <h4>Nam liber tempor cum soluta nobis eleifend option congue nihil imper-<br>diet doming id quod mazim placerat facer possim assum.</h4>
+                <a href="#"><button type="button" class="btn" name="Start">Get Started</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sup_about">
+                <div class="column">
+                    <svg class="column_icon">
+                        <use xlink:href="#pencil"></use>
+                    </svg>
+                    <h3>Web & App Design</h3>
+                    <h4>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</h4>
+                    <hr>
+                </div>
+
+                <div class="column">
+                    <svg class="column_icon">
+                        <use xlink:href="#layers"></use>
+                    </svg>
+                    <h3>Development</h3>
+                    <h4>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</h4>
+                    <hr>
+                </div>
+
+                <div class="column">
+                    <svg class="column_icon">
+                        <use xlink:href="#cog"></use>
+                    </svg>
+                    <h3>Customization</h3>
+                    <h4>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</h4>
+                    <hr>
+                </div>
+
+                <div class="column">
+                    <svg class="column_icon">
+                        <use xlink:href="#case"></use>
+                    </svg>
+                    <h3>Marketing</h3>
+                    <h4>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</h4>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="about_us">
+            <div class="container">
+                <div class="about_text">
+                    <h2>Waxom is Realization of your Ideas.</h2>
+                    <h4>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h4>
+                </div>
+                <div class="about_browser">
+                    <img src="2\assets\img\3-layers.png">
+                </div>
+            </div>
+
+            <div class="gradient">
+                <div class="container">
+                    <div class="gradient_inside">
+                        <div class="gradient_text">
+                            <h3><span>Waxom</span> Multipurpose WordPress Theme</h3>
+                            <h4>Don't Forget to Rate the Template. Thanks so much!</h4>
+                        </div>
+                        <a href="#"><button type="button" class="btn" name="Start">Purchase Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="container">
+                <div class="sup_portfolio">
+                    <h2>Our Latest Projects.</h2>
+                    <h3>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h3>
+                </div>
+
+                <div class="portfolio_buttons">
+                    <a href="#"><button type="button" class="btn , button_all" name="Start">All</button></a>
+                    <a href="#"><button type="button" class="btn" name="Start">Web Design</button></a>
+                    <a href="#"><button type="button" class="btn" name="Start">Mobile App</button></a>
+                    <a href="#"><button type="button" class="btn" name="Start">Illustration</button></a>
+                    <a href="#"><button type="button" class="btn" name="Start">Photography</button></a>
+                </div>
+
+                <div class="portfolio_projects">
+                    <div class="portfolio_project">
+                        <img src="2\assets\img\1pic.png" class="portfolio_pic">
+                        <div class="portfolio_subtext">
+                            <h2>Claritas Etiam Processus</h2>
+                            <h3>Photography, Nature</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_project">
+                        <img src="2\assets\img\2pic.png" class="portfolio_pic">
+                        <div class="portfolio_subtext">
+                            <h2>Quam Nutamus Farum</h2>
+                            <h3>Graphic Design, Mock-Up</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_project">
+                        <img src="2\assets\img\3pic.png" class="portfolio_pic">
+                        <div class="portfolio_subtext">
+                            <h2>Usus Legentis Videntur</h2>
+                            <h3>Photography, Holiday</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_project">
+                        <img src="2\assets\img\4pic.png" class="portfolio_pic">
+                        <div class="portfolio_subtext">
+                            <h2>Claritas Etiam Processus</h2>
+                            <h3>Photography, Nature</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_project">
+                        <img src="2\assets\img\5pic.png" class="portfolio_pic">
+                        <div class="portfolio_subtext">
+                            <h2>Quam Nutamus Farum</h2>
+                            <h3>Graphic Design, Mock-Up</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_project">
+                        <img src="2\assets\img\6pic.png" class="portfolio_pic">
+                        <div class="portfolio_subtext">
+                            <h2>Usus Legentis Videntur</h2>
+                            <h3>Photography, Holiday</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio_subbutton">
+                    <a href="#"><button type="button" name="Start">Load more</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="2\assets\img\7vid-layers.png">
+        </div>
+
+        <div class="container">
+            <div class="mobile_device">
+                <div class="mobile_inner">
+                    <img src="2\assets\img\iPhone_in_hand.png">
+                </div>
+                <div class="mobile_outer">
+                    <div class="mobile_text">
+                        <h2>Excellent for Mobile Devices.</h2>
+                        <p class="under_headline">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt
+                            saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                        <p class="list"><img src="2\assets\img\01.png">Nam liber tempor cum soluta nobis eleifend option;</p>
+                        <p class="list"><img src="2\assets\img\01.png">Option congue nihil imperdiet doming id quod mazim placerat facer;</p>
+                        <p class="list"><img src="2\assets\img\01.png">Eodem modo typi, qui nunc nobis videntur parum futurum;</p>
+                        <p class="list"><img src="2\assets\img\01.png">Investigationes demonstraverunt lectores</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="counters">
+            <div class="container">
+                <div class="sup_recent">
+                    <div class="recent_column">
+                        <img src="2\assets\img\1peoples.png">
+                        <p class="numeral">3587</p>
+                        <h3>Satisfied Clients</h3>
+                        <hr class="recent_line">
+                    </div>
+                    <div class="recent_column">
+                        <img src="2\assets\img\2coffe.png">
+                        <p class="numeral">207</p>
+                        <h3>Cups of coffee</h3>
+                        <hr class="recent_line">
+                    </div>
+                    <div class="recent_column">
+                        <img src="2\assets\img\3chat.png">
+                        <p class="numeral">2500</p>
+                        <h3>Blog posts</h3>
+                        <hr class="recent_line">
+                    </div>
+                    <div class="recent_column">
+                        <img src="2\assets\img\4heart.png">
+                        <p class="numeral">873</p>
+                        <h3>Likes</h3>
+                        <hr class="recent_line">
+                    </div>
+                    <div class="recent_column">
+                        <img src="2\assets\img\5tray.png">
+                        <p class="numeral">900</p>
+                        <h3>We launched</h3>
+                        <hr class="recent_line">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="recent_posts">
+                <div class="sup_posts">
+                    <h2>Recent Posts.</h2>
+                    <h4>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h4>
+                </div>
+
+                <div class="recent_main">
+                    <div class="recent_post">
+                        <img src="2\assets\img\photo1.png">
+                        <div class="recent_text">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <h3>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h3>
+                            <p class="post_more"><a href="#"></a>Read More</p>
+                        </div>
+                    </div>
+                    <div class="recent_post">
+                        <img src="2\assets\img\photo2.png">
+                        <div class="recent_text">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <h3>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h3>
+                            <p class="post_more"><a href="#"></a>Read More</p>
+                        </div>
+                    </div>
+                    <div class="recent_post">
+                        <img src="2\assets\img\photo3.png">
+                        <div class="recent_text">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <h3>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h3>
+                            <p class="post_more"><a href="#"></a>Read More</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logotypes_container">
+            <div class="container">
+                <div class="company_logotypes">
+                    <img src="2\assets\img\logo-01.png" width="210px" height="127px">
+                    <img src="2\assets\img\logo-02.png" width="210px" height="210px">
+                    <img src="2\assets\img\logo-03.png" width="210px" height="130px">
+                    <img src="2\assets\img\logo-04.png" width="210px" height="164px">
+                </div>
+            </div>
+        </div>
+
+        <div class="all_footer">
+            <div class="container">
+            <div class="upper_footer">
+                <div class="footer_column">
+                    <h1><img src="2\assets\img\logo.svg">Waxom</h1>
+                    <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.</h4>
+                    <p class="post_more"><a href="#"></a>Read More</p>
+                </div>
+
+                <div class="footer_column">
+                    <h2>Recent Posts</h2>
+                    <h5>September 08, 2015</h5>
+                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h3>
+                    <hr>
+                    <h5><span class="spt_warning">September 08, 2015</span></h5>
+                    <h3><span class="span_warning">Diam nonummy nibh euismod tincidunt ut laoreet dolore magna</span></h3>
+                    <hr>
+                    <h5>September 08, 2015</h5>
+                    <h3>Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima</h3>
+                </div>
+
+                <div class="footer_column">
+                    <h2>Our Twitter</h2>
+                    <h3><span class="special_symbols">@waxom</span> Cum soluta nobis eleifend option congue nihil imperdiet doming</h3>
+                    <h5>3 mins ago</h5>
+                    <hr>
+                    <h3>Mirum est <span class="special_symbols">#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</h3>
+                    <h5>5 hours ago</h5>
+                    <hr>
+                    <h3>Soluta nobis option <span class="span_link">bit.ly/1Hniso7</span></h3>
+                    <h5>20 days ago</h5>
+                </div>
+
+                <div class="footer_column">
+                    <div class="dribble_text">
+                    <h2>Dribbble Widget</h2>
+                    </div>
+                    <div class="dribble_pics">
+                        <img src="2\assets\img\widget1.png">
+                        <img src="2\assets\img\widget2.png">
+                        <img src="2\assets\img\widget3.png">
+                        <img src="2\assets\img\widget4.png">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="lower_footer">
+                <div class="container">
+                    <div class="both_footers">
+                    <div class="footer_left">
+                        <p>Copyright © 2015 <span class="highlighting">Waxom</span>   |   <span class="span_hover">Privacy Policy</span>   |   <span class="span_hover">FAQ</span>   |   <span class="span_hover">Support</span></p>
+                    </div>
+                    <div class="footer_right">
+                        <p>Designed by <span class="highlighting">ThemeFire</span>   |   Only on <span class="highlighting">Envato Market</span></p>
+                    </div>
+                    </div>
+                    </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
